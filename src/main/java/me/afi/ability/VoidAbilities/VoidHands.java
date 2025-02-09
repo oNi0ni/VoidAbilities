@@ -6,7 +6,6 @@ import com.projectkorra.projectkorra.ability.AddonAbility;
 import com.projectkorra.projectkorra.ability.CoreAbility;
 import com.projectkorra.projectkorra.util.ColoredParticle;
 import com.projectkorra.projectkorra.util.DamageHandler;
-import com.projectkorra.projectkorra.util.ParticleEffect;
 import me.afi.ability.Listener.VoidListener;
 import me.afi.ability.api.VoidAbility;
 import org.bukkit.Color;
@@ -25,7 +24,6 @@ public class VoidHands extends VoidAbility implements AddonAbility {
     private Permission perm;
     private static Location loc4;
     private static Vector direction;
-    private int disctanceTravveled;
     private boolean shoot = false;
     public VoidHands(Player player) {
         super(player);
@@ -35,7 +33,6 @@ public class VoidHands extends VoidAbility implements AddonAbility {
         player.getWorld().playSound(player, Sound.BLOCK_AMETHYST_BLOCK_RESONATE, 0.28F, 1.98f);
         loc3 = player.getLocation();
         loc4 = player.getLocation();
-        disctanceTravveled = 0;
         start();
     }
 

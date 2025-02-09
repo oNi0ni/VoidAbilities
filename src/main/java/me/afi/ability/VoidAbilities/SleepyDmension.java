@@ -52,7 +52,7 @@ public class SleepyDmension extends VoidAbility implements AddonAbility {
             CircleEffect();
             if(!player.isSneaking()) {
                 for(Entity entity : GeneralMethods.getEntitiesAroundPoint(player.getLocation(), 8)) {
-                    Location locWorld = new Location(Bukkit.getWorld("oNi0_Sleep"), -2.006, 66, -2.737);
+                    Location locWorld = new Location(Bukkit.getWorld("Sleep"), -2.006, 66, -2.737);
                     entity.teleport(locWorld);
                     entity.getWorld().playSound(entity, Sound.BLOCK_PORTAL_TRAVEL, 0.78F, 0.98f);
                 }
@@ -68,7 +68,7 @@ public class SleepyDmension extends VoidAbility implements AddonAbility {
     }
 
     public void TeleportPlayer() {
-        Location locWorld = new Location(Bukkit.getWorld("oNi0_Sleep"), -2.006, 66, -2.737);
+        Location locWorld = new Location(Bukkit.getWorld("Sleep"), -2.006, 66, -2.737);
         player.teleport(locWorld);
         ParticleEffect.FLASH.display(player.getLocation(), 1,0,0,0,0f);
         player.getWorld().playSound(player, Sound.BLOCK_AMETHYST_BLOCK_BREAK, 0.38F, 0.98f);

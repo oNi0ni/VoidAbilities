@@ -8,10 +8,6 @@ import me.afi.ability.EnergyBar;
 import me.afi.ability.Listener.VoidListener;
 import me.afi.ability.api.VoidAbility;
 import org.bukkit.*;
-import org.bukkit.boss.BarColor;
-import org.bukkit.boss.BarStyle;
-import org.bukkit.boss.BossBar;
-import org.bukkit.entity.Boss;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
@@ -24,7 +20,7 @@ public class VoidTeleport extends VoidAbility implements AddonAbility {
     public VoidTeleport(Player player) {
         super(player);
         player.getWorld().playSound(player, Sound.BLOCK_AMETHYST_BLOCK_RESONATE, 0.28F, 1.98f);
-        if (!player.getWorld().getName().equals("oNi0_Sleep")) player.sendMessage(ChatColor.RED + "Вы не находитесь в мире снов");
+        if (!player.getWorld().getName().equals("Sleep")) player.sendMessage(ChatColor.RED + "You're not in the dream world\n");
         start();
     }
 
